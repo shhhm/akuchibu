@@ -13,12 +13,16 @@ public class AkuchibuController {
 		return "chat1";
 	}
 	
-	
-
 	@RequestMapping("/top")
 	public String top() {
 		return "chat2";
 	}
+	
+	@RequestMapping("/test")
+	public String chat() {
+		return "chat3";
+	}
+
 	
 	}
 	
