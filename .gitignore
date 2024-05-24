@@ -36,7 +36,3 @@ out/
 ### VS Code ###
 .vscode/
 
-# Include hidden files
-.*
-!.gitignore
-!other-important-hidden-file
