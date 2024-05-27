@@ -24,11 +24,22 @@ public class EntForm {
 		// Aが送信された場合にAのカウントをインクリメント
 		if ("外部研修".equals(choice)) {
 			sampleDao.incrementCountForOptionA();
-		}
-		else if ("B".equals(choice)) {
+		} else if ("内部研修".equals(choice)) {
 			sampleDao.incrementCountForOptionB();
+		} else if ("部署説明".equals(choice)) {
+			sampleDao.incrementCountForOptionC();
+		} else if ("PCロック".equals(choice)) {
+			sampleDao.incrementCountForOptionD();
+		} else if ("打刻".equals(choice)) {
+			sampleDao.incrementCountForOptionE();
+		} else if ("体調不良".equals(choice)) {
+			sampleDao.incrementCountForOptionF();
+		} else if ("有給".equals(choice)) {
+			sampleDao.incrementCountForOptionG();
+		} else if ("忌引き".equals(choice)) {
+			sampleDao.incrementCountForOptionH();
 		}
-		
+
 		return "redirect:/thankyou"; // 送信後のページにリダイレクト
 	}
 

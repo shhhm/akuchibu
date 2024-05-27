@@ -45,6 +45,43 @@ public class AkuchibuController {
 		return "b";
 	}
 	
+	@RequestMapping("/c")
+	public String c() {
+		sampleDao.incrementCountForOptionC();
+		return "c";
+	}
+	
+	@RequestMapping("/d")
+	public String d() {
+		sampleDao.incrementCountForOptionD();
+		return "d";
+	}
+	
+	@RequestMapping("/e")
+	public String e() {
+		sampleDao.incrementCountForOptionE();
+		return "e";
+	}
+	
+	@RequestMapping("/f")
+	public String f() {
+		sampleDao.incrementCountForOptionF();
+		return "f";
+	}
+	
+	@RequestMapping("/g")
+	public String g() {
+		sampleDao.incrementCountForOptionG();
+		return "g";
+	}
+
+	@RequestMapping("/h")
+	public String h() {
+		sampleDao.incrementCountForOptionH();
+		return "h";
+	}
+	
+	
 	@PostMapping("/submitSurvey")
     public String submitSurvey(@RequestParam("choice") String choice) {
         // アンケート結果をサービスに渡して処理

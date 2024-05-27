@@ -21,8 +21,32 @@ public class SampleDao {
 	public void incrementCountForOptionA() {
 		jdbcTemplate.update("UPDATE survey_result SET count = count + 1 WHERE id = 1");
 	}
-	
+
 	public void incrementCountForOptionB() {
 		jdbcTemplate.update("UPDATE survey_result SET count = count + 1 WHERE id = 2");
+	}
+
+	public void incrementCountForOptionC() {
+		jdbcTemplate.update("UPDATE survey_result SET count = count + 1 WHERE id = 3");
+	}
+
+	public void incrementCountForOptionD() {
+		jdbcTemplate.update("UPDATE survey_result SET count = count + 1 WHERE id = 4");
+	}
+	
+	public void incrementCountForOptionE() {
+		jdbcTemplate.update("UPDATE survey_result SET count = count + 1 WHERE id = 5");
+	}
+	
+	public void incrementCountForOptionF() {
+		jdbcTemplate.update("UPDATE survey_result SET count = count + 1 WHERE id = 6");
+	}
+	
+	public void incrementCountForOptionG() {
+		jdbcTemplate.update("UPDATE survey_result SET count = count + 1 WHERE id = 7");
+	}
+	
+	public void incrementCountForOptionH() {
+		jdbcTemplate.update("UPDATE survey_result SET count = count + 1 WHERE id = 8");
 	}
 }
