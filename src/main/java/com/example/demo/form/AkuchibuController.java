@@ -22,7 +22,7 @@ public class AkuchibuController {
 	public String chat() {
 		return "chat3";
 	}
-
+	
 	
 	}
 	
