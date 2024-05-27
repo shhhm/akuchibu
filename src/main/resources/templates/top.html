@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel ="stylesheet" th:href = "@{/style.css}">
 	<title>Survey Form</title>
 </head>
 
-<body>
+<body id="top">
 	<!-- フォーム -->
 	<h1>ようこそ 株式会社セブン＆アイ・ネットメディアへ！</h1>
 
-
-	<h2>新入社員用のヘルプページです</h2>
-	<h2>気になることを選択して送信をクリック！</h2>
-	<p>お気軽にどうそ！</p>
+	<div class="icon"></div>
+	<h2 id="top2">新入社員用のヘルプページです。お気軽にどうぞ！</h2>
+	<h2 id="top3">気になることを選択して送信をクリック！</h2>
 	<form id="surveyForm">
 		<label>
 			<input type="radio" name="choice" value="A"> 外部研修
@@ -40,7 +40,9 @@
 		<label>
 			<input type="radio" name="choice" value="H"> 忌引き
 		</label><br>
-		<button type="button" onclick="submitSurvey()">送信</button>
+		<p>その他、悩みがあればお聞かせください</p>
+		<textarea class="custom-textbox" placeholder="～～について教えてください"></textarea>
+		<p><button type="button" onclick="submitSurvey()">送信</button>	</p>
 	</form>
 
 
@@ -95,6 +97,7 @@
 			window.location.href = targetUrl;
 		}
 	</script>
+
 </body>
 
 </html>
