@@ -1,23 +1,28 @@
 @charset "UTF-8";
 
 h1{
-	color: rgba(75, 75, 75, 1);
-	}
-	
-#top{
-	background-color: rgba(239, 129, 0, 1);
-}
-
-#surveyForm{
 	color: aliceblue;
+	  text-align: center; /* テキストの中央揃え */
+	}
+
+#top{
+	background-color: rgba(237, 237, 237, 1);
 }
 
 #top2{
+	 text-align: center; /* テキストの中央揃え */
+}
+
+#surveyForm{
 	color: rgba(75, 75, 75, 1);
 }
 
-#top3{
+#top2{
 	color: aliceblue;
+}
+
+#top3{
+	color: rgba(75, 75, 75, 1);
 }
 
 .custom-textbox{
@@ -41,4 +46,12 @@ h1{
         left: 151px;
         top: 248px;
         background: url('お問い合わせのアイコン Q & Aの吹き出し 3.png');
+    }
+    
+     .element {
+		z-index: -1; /* 最背面に配置 */
+        margin-top: 5px; /* 上から100ピクセルのマージンを設定 */
+         width: 1000px; /* 幅を300pxに設定 */
+        height: 110px; /* 高さを200pxに設定 */
+        background-color: rgba(9, 155, 75, 1); /* 背景色を指定 */
     }
