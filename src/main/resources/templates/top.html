@@ -15,7 +15,7 @@
 	<h2>新入社員用のヘルプページです</h2>
 	<h2>気になることを選択して送信をクリック！</h2>
 	<p>お気軽にどうそ！</p>
-	<form id="surveyForm">
+	<form id="surveyForm" th:action="@{/a}""@{/b}">
 		<label>
 			<input type="radio" name="choice" value="A"> 外部研修
 		</label><br>
@@ -55,10 +55,10 @@
 			let targetUrl;
 			switch (choice) {
 				case 'A':
-					targetUrl = 'a.html';
+					targetUrl = 'a';
 					break;
 				case 'B':
-					targetUrl = 'b.html';
+					targetUrl = 'b';
 					break;
 				case 'C':
 					targetUrl = 'c.html';
