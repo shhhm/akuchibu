@@ -37,6 +37,7 @@ public class AkuchibuController {
 		sampleDao.incrementCountForOptionA();
 		return "a";
 	}
+
 	
 	@RequestMapping("/b")
 	public String b() {
