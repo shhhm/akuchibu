@@ -48,13 +48,15 @@ header {
         margin: 0;
 }
 
-h1 {
+.toph1{
     font-size: 1.5em;
     color: #fff;
     background-color: #4CAF50;
     padding: 20px;
     border-radius: 5px;
 }
+
+
 
 #top2{
 	font-size: 1em;
