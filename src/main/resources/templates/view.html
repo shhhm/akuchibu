@@ -3,46 +3,32 @@
 <head>
     <title>Survey Results</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <link rel="stylesheet" th:href="style.css" />
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
     <h1>送信回数</h1>
     <table>
         <tr>
-            <th>Choice</th>
-            <th>Count</th>
+            <th>項目</th>
+            <th>回数</th>
         </tr>
-        <tr>
-            <td>外部研修</td>
-            <td th:text="${surveyResults['外部研修']}">0</td>
-        </tr>
-        <tr>
-            <td>内部研修</td>
-            <td th:text="${surveyResults['内部研修']}">0</td>
-        </tr>
-        <tr>
-            <td>部署説明</td>
-            <td th:text="${surveyResults['部署説明']}">0</td>
-        </tr>
-        <tr>
-            <td>パソコン</td>
-            <td th:text="${surveyResults['パソコン']}">0</td>
-        </tr>
-        <tr>
-            <td>打刻</td>
-            <td th:text="${surveyResults['打刻']}">0</td>
-        </tr>
-        <tr>
-            <td>体調不良</td>
-            <td th:text="${surveyResults['体調不良']}">0</td>
-        </tr>
-        <tr>
-            <td>有給</td>
-            <td th:text="${surveyResults['有給']}">0</td>
-        </tr>
-        <tr>
-            <td>忌引き</td>
-            <td th:text="${surveyResults['忌引き']}">0</td>
+        <tr th:each="entry : ${surveyResults}">
+			<td th:text="'・ ' + ${entry.key}"></td>
+            <td th:text="${entry.value}"></td>
         </tr>
     </table>
     <p>
