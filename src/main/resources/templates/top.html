@@ -9,44 +9,53 @@
 </head>
 
 <body id="top">
-	<!-- フォーム -->
-	<h1>ようこそ 株式会社セブン＆アイ・ネットメディアへ！</h1>
-
-	<div class="icon"></div>
-	<h2 id="top2">新入社員用のヘルプページです。お気軽にどうぞ！</h2>
-	<h2 id="top3">気になることを選択して送信をクリック！</h2>
+	<div class="container">
+		<!-- フォーム -->
+		<header>
+		        <img th:src="@{/images/logo.png}"  alt="セブン＆アイ Net Media ロゴ" class="logo" >
+		        <h1>ようこそ株式会社セブン＆アイ・ネットメディアへ！</h1>
+				<div class="header-content">
+				<img th:src="@{/images/kkrn_icon_faq_22.png}"  alt="QandAlogo" class="logo2" >
+		        <h2 id="top2">新人社員用のヘルプページです。お気軽にどうぞ！！</h2>
+				</div>
+	    </header>
+		
+	<main>
+	<p id="top3">気になることを選択して送信をクリック！</p>
 	<form id="surveyForm" th:action="@{/a}">
-
+		
+		<div class="radio-group">
 		<label>
-			<input type="radio" name="choice" value="A"> 外部研修
+			<input type="radio" name="choice" value="A"> 外部研修について
 		</label><br>
 		<label>
-			<input type="radio" name="choice" value="B"> 内部研修
+			<input type="radio" name="choice" value="B"> 6月以降の内部研修の詳細について
 		</label><br>
 		<label>
-			<input type="radio" name="choice" value="C"> 部署説明
+			<input type="radio" name="choice" value="C"> 部署について
 		</label><br>
 		<label>
-			<input type="radio" name="choice" value="D"> パソコン
+			<input type="radio" name="choice" value="D"> パソコンがロックされてしまった（パスワードを忘れた）
 		</label><br>
 		<label>
-			<input type="radio" name="choice" value="E"> 打刻
+			<input type="radio" name="choice" value="E"> 打刻方法について
 		</label><br>
 		<label>
-			<input type="radio" name="choice" value="F"> 体調不良
+			<input type="radio" name="choice" value="F"> 体調不良で休みたい
 		</label><br>
 		<label>
-			<input type="radio" name="choice" value="G"> 有給
+			<input type="radio" name="choice" value="G"> 有給休暇を取得したい
 		</label><br>
 		<label>
-			<input type="radio" name="choice" value="H"> 忌引き
+			<input type="radio" name="choice" value="H"> 忌引き休暇を取得したい
 		</label><br>
-		<p>その他、悩みがあればお聞かせください</p>
-		<textarea class="custom-textbox" placeholder="～～について教えてください"></textarea>
+		</div>
+		<label for="other">その他、悩みがあればお聞かせください</label>
+		<textarea id="other" name="other" rows="4" placeholder="例）有給の取り方について教えてください"></textarea>
 		<p><button type="button" onclick="submitSurvey()">送信</button>	</p>
 	</form>
-
-	
+	</div>
+	</main>
 
 	<script>
 		function submitSurvey() {
@@ -98,6 +107,7 @@
 			window.location.href = targetUrl;
 		}
 	</script>
+	
 
 </body>
 
