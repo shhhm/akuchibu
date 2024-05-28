@@ -54,8 +54,11 @@ public class SampleDao {
 	
 	public Integer getCountForOption(String option) {
 	    String sql = "SELECT count FROM survey_result WHERE choice = ?";
+	    System.out.println("SQLクエリ: " + sql); // SQLクエリをログに出力
 	    try {
-	        return jdbcTemplate.queryForObject(sql, new Object[]{option}, Integer.class);
+	    	int count = (int)jdbcTemplate.queryForList(sql, option).get(0).get("count");
+//	        return jdbcTemplate.queryForObject(sql, new Object[]{option}, Integer.class);
+	    	return count;
 	    } catch (Exception e) {
 	        // エラーハンドリング
 	        e.printStackTrace();
@@ -63,5 +66,6 @@ public class SampleDao {
 	    }
 	}
 
+	
 
 }

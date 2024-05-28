@@ -90,14 +90,14 @@ public class AkuchibuController {
 
     private Map<String, Integer> getSurveyResultsMap() {
         Map<String, Integer> surveyResults = new HashMap<>();
-        surveyResults.put("外部研修", sampleDao.getCountForOption("A"));
-        surveyResults.put("内部研修", sampleDao.getCountForOption("B"));
-        surveyResults.put("部署説明", sampleDao.getCountForOption("C"));
-        surveyResults.put("パソコン", sampleDao.getCountForOption("D"));
-        surveyResults.put("打刻", sampleDao.getCountForOption("E"));
-        surveyResults.put("体調不良", sampleDao.getCountForOption("F"));
-        surveyResults.put("有給", sampleDao.getCountForOption("G"));
-        surveyResults.put("忌引き", sampleDao.getCountForOption("H"));
+        surveyResults.put("外部研修", sampleDao.getCountForOption("外部研修"));        
+        surveyResults.put("内部研修", sampleDao.getCountForOption("内部研修"));
+        surveyResults.put("部署説明", sampleDao.getCountForOption("部署説明"));
+        surveyResults.put("パソコン", sampleDao.getCountForOption("パソコン"));
+        surveyResults.put("打刻", sampleDao.getCountForOption("打刻"));
+        surveyResults.put("体調不良", sampleDao.getCountForOption("体調不良"));
+        surveyResults.put("有給", sampleDao.getCountForOption("有給"));
+        surveyResults.put("忌引き", sampleDao.getCountForOption("忌引き"));
         return surveyResults;
     }
 }
