@@ -33,20 +33,35 @@ public class SampleDao {
 	public void incrementCountForOptionD() {
 		jdbcTemplate.update("UPDATE survey_result SET count = count + 1 WHERE id = 4");
 	}
-	
+
 	public void incrementCountForOptionE() {
 		jdbcTemplate.update("UPDATE survey_result SET count = count + 1 WHERE id = 5");
 	}
-	
+
 	public void incrementCountForOptionF() {
 		jdbcTemplate.update("UPDATE survey_result SET count = count + 1 WHERE id = 6");
 	}
-	
+
 	public void incrementCountForOptionG() {
 		jdbcTemplate.update("UPDATE survey_result SET count = count + 1 WHERE id = 7");
 	}
-	
+
 	public void incrementCountForOptionH() {
 		jdbcTemplate.update("UPDATE survey_result SET count = count + 1 WHERE id = 8");
 	}
+
+
+	
+	public Integer getCountForOption(String option) {
+	    String sql = "SELECT count FROM survey_result WHERE choice = ?";
+	    try {
+	        return jdbcTemplate.queryForObject(sql, new Object[]{option}, Integer.class);
+	    } catch (Exception e) {
+	        // エラーハンドリング
+	        e.printStackTrace();
+	        return 0; // エラー時は0を返す
+	    }
+	}
+
+
 }
