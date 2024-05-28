@@ -7,3 +7,5 @@ INSERT INTO survey_result (choice) VALUES ('体調不良');
 INSERT INTO survey_result (choice) VALUES ('有給');
 INSERT INTO survey_result (choice) VALUES ('忌引き');
 
+INSERT INTO comment (come) values ('あいうえお');
+
