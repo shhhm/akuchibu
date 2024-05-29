@@ -21,40 +21,40 @@
 	    </header>
 		
 	<main>
-	<p id="top3">気になることを選択して送信をクリック！</p>
-	<form id="surveyForm" th:action="@{/a}">
-		
-		<div class="radio-group">
-		<label>
-			<input type="radio" name="choice" value="A"> 外部研修について
-		</label><br>
-		<label>
-			<input type="radio" name="choice" value="B"> 6月以降の内部研修の詳細について
-		</label><br>
-		<label>
-			<input type="radio" name="choice" value="C"> 部署について
-		</label><br>
-		<label>
-			<input type="radio" name="choice" value="D"> パソコンがロックされてしまった（パスワードを忘れた）
-		</label><br>
-		<label>
-			<input type="radio" name="choice" value="E"> 打刻方法について
-		</label><br>
-		<label>
-			<input type="radio" name="choice" value="F"> 体調不良で休みたい
-		</label><br>
-		<label>
-			<input type="radio" name="choice" value="G"> 有給休暇を取得したい
-		</label><br>
-		<label>
-			<input type="radio" name="choice" value="H"> 忌引き休暇を取得したい
-		</label><br>
+		<p id="top3">気になることを選択して送信をクリック！</p>
+		<form id="surveyForm" th:action="@{/a}">
+			
+			<div class="radio-group">
+			<label>
+				<input type="radio" name="choice" value="A"> 外部研修について
+			</label><br>
+			<label>
+				<input type="radio" name="choice" value="B"> 6月以降の内部研修の詳細について
+			</label><br>
+			<label>
+				<input type="radio" name="choice" value="C"> 部署について
+			</label><br>
+			<label>
+				<input type="radio" name="choice" value="D"> パソコンがロックされてしまった（パスワードを忘れた）
+			</label><br>
+			<label>
+				<input type="radio" name="choice" value="E"> 打刻方法について
+			</label><br>
+			<label>
+				<input type="radio" name="choice" value="F"> 体調不良で休みたい
+			</label><br>
+			<label>
+				<input type="radio" name="choice" value="G"> 有給休暇を取得したい
+			</label><br>
+			<label>
+				<input type="radio" name="choice" value="H"> 忌引き休暇を取得したい
+			</label><br>
+			</div>
+			<label for="other">その他、悩みがあればお聞かせください</label>
+			<textarea id="other" name="other" rows="4" placeholder="例）通勤経路を変えたいです"></textarea>
+			<p><button type="button" onclick="submitSurvey()">送信</button>	</p>
+		</form>
 		</div>
-		<label for="other">その他、悩みがあればお聞かせください</label>
-		<textarea id="other" name="other" rows="4" placeholder="例）通勤経路を変えたいです"></textarea>
-		<p><button type="button" onclick="submitSurvey()">送信</button>	</p>
-	</form>
-	</div>
 	</main>
 
 	<script>
