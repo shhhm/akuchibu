@@ -5,5 +5,6 @@ CREATE TABLE survey_result (
 );
 
 Create table comment (
+id BIGINT AUTO_INCREMENT PRIMARY KEY,
 come VARCHAR(500) 
 );
