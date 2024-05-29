@@ -26,6 +26,7 @@ header {
     display: flex;
     align-items: center;
     text-align: center;
+    justify-content: center; /* 水平方向に中央揃え */
 }
 
 .header-text {
@@ -46,6 +47,7 @@ header {
         align-items: center;
         height: 100%;
         margin: 0;
+        margin-right: 10px; /* ロゴとテキストの間にスペースを追加 */
 }
 
 .toph1{
