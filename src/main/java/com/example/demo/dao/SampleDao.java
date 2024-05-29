@@ -48,4 +48,19 @@ public class SampleDao {
 	public void incrementCountForOptionH() {
 		db.update("UPDATE survey_result SET count = count + 1 WHERE id = 8");
 	}
+
+	public Integer getCountForOption(String option) {
+		String sql = "SELECT count FROM survey_result WHERE choice = ?";
+		System.out.println("SQLクエリ: " + sql); // SQLクエリをログに出力
+		try {
+			int count = (int) db.queryForList(sql, option).get(0).get("count");
+			//	        return jdbcTemplate.queryForObject(sql, new Object[]{option}, Integer.class);
+			return count;
+		} catch (Exception e) {
+			// エラーハンドリング
+			e.printStackTrace();
+			return 0; // エラー時は0を返す
+		}
+	}
+
 }
