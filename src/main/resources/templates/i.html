@@ -1,32 +1,14 @@
+<!-- i.htmlの該当部分 -->
 <!DOCTYPE html>
-<html lang="ja" xmlns:th="http://www.thymeleaf.org">
-
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>確認</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <title>Other Issues</title>
 </head>
-
 <body>
-	<h1>入力確認</h1>
-	<div th:object="${input}">
-		<p>ここから</p>
-		<p th:text="*{come}"></p>
-		<p>ここまで</p>
-	</div>
-
-
-
-	<form method="get" action="#" th:action="@{/complete}">
-		<input type="submit" value="完了画面へ">
-	</form>
-
-	<form method="get" action="#" th:action="@{/top}">
-		<input type="submit" value="入力画面へ">
-	</form>
-
-	</div>
+    <h1>その他のお悩み・ご意見</h1>
+    <p th:text="${message}">ここにメッセージが表示されます</p>
 </body>
-
 </html>

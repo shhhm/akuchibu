@@ -5,7 +5,9 @@ import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.dao.SampleDao;
 
@@ -32,58 +34,45 @@ public class AkuchibuController {
 		return "top";
 	}
 
-	@RequestMapping("/a")
-	public String a() {
-		sampleDao.incrementCountForOptionA();
-		return "a";
+	@PostMapping("/a")
+	public String handleFormSubmission(@RequestParam("choice") String choice, @RequestParam(value = "other", required = false) String other, Model model) {
+	    switch (choice) {
+	        case "A":
+	            sampleDao.incrementCountForOptionA();
+	            return "a";
+	        case "B":
+	            sampleDao.incrementCountForOptionB();
+	            return "b";
+	        case "C":
+	            sampleDao.incrementCountForOptionC();
+	            return "c";
+	        case "D":
+	            sampleDao.incrementCountForOptionD();
+	            return "d";
+	        case "E":
+	            sampleDao.incrementCountForOptionE();
+	            return "e";
+	        case "F":
+	            sampleDao.incrementCountForOptionF();
+	            return "f";
+	        case "G":
+	            sampleDao.incrementCountForOptionG();
+	            return "g";
+	        case "H":
+	            sampleDao.incrementCountForOptionH();
+	            return "h";
+	        case "I":
+	            if (other == null || other.trim().isEmpty()) {
+	                model.addAttribute("error", "コメントを入力してください。");
+	                return "top"; // エラーメッセージを表示するトップページに戻る
+	            }
+	            model.addAttribute("message", other);
+	            return "i";
+	        default:
+	            return "top"; // デフォルトビュー
+	    }
 	}
 
-	@RequestMapping("/b")
-	public String b() {
-		sampleDao.incrementCountForOptionB();
-		return "b";
-	}
-
-	@RequestMapping("/c")
-	public String c() {
-		sampleDao.incrementCountForOptionC();
-		return "c";
-	}
-
-	@RequestMapping("/d")
-	public String d() {
-		sampleDao.incrementCountForOptionD();
-		return "d";
-	}
-
-	@RequestMapping("/e")
-	public String e() {
-		sampleDao.incrementCountForOptionE();
-		return "e";
-	}
-
-	@RequestMapping("/f")
-	public String f() {
-		sampleDao.incrementCountForOptionF();
-		return "f";
-	}
-
-	@RequestMapping("/g")
-	public String g() {
-		sampleDao.incrementCountForOptionG();
-		return "g";
-	}
-
-	@RequestMapping("/h")
-	public String h() {
-		sampleDao.incrementCountForOptionH();
-		return "h";
-	}
-
-	@RequestMapping("/i")
-	public String i() {
-		return "i";
-	}
 
 	@RequestMapping("/complete")
 	public String complete() {
