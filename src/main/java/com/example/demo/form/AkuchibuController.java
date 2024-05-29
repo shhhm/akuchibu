@@ -1,6 +1,6 @@
 package com.example.demo.form;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
@@ -89,7 +89,7 @@ public class AkuchibuController {
     }
 
     private Map<String, Integer> getSurveyResultsMap() {
-        Map<String, Integer> surveyResults = new HashMap<>();
+        Map<String, Integer> surveyResults = new LinkedHashMap<>();
         surveyResults.put("外部研修", sampleDao.getCountForOption("外部研修"));        
         surveyResults.put("内部研修", sampleDao.getCountForOption("内部研修"));
         surveyResults.put("部署説明", sampleDao.getCountForOption("部署説明"));
