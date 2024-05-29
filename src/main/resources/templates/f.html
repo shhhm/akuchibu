@@ -1,54 +1,61 @@
 <!DOCTYPE html>
-<html lang="ja">
+
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>体調不良</title>
 	<style>
-			body {
-			    font-family: Arial, sans-serif;
-			    background-color: #f8f8f8;
-			    margin: 0;
-			    padding: 0;
-			}
-			
-			.container {
-			    width: 80%;
-			    max-width: 1500px;
-			    margin: 50px auto;
-			    padding: 20px;
-			    background-color: #fff;
-			    border-radius: 8px;
-			    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-			}
-			.toph1{
-			    font-size: 1.5em;
-			    color: #fff;
-			    background-color: #4CAF50;
-			    padding: 20px;
-			    border-radius: 5px;
-			}
-			.q-icon {
-			    background-color: rgba(9, 155, 75, 1);
-			    border-radius: 50%;
-			    color: white;
-			    display: inline-block;
-			    font-size: 1.5em; /* フォントサイズを大きくします */
-			    height: 2em;     /* 高さを大きくします */
-			    line-height: 2em; /* line-heightも同じ値に調整 */
-			    margin-right: 0.5em;
-			    text-align: center;
-			    width: 2em;     /* 幅を大きくします */
-			}
-		</style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #F8F8F8;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			width: 80%;
+			max-width: 1500px;
+			margin: 50px auto;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 8px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		.toph1 {
+			font-size: 1.5em;
+			color: #fff;
+			background-color: #4CAF50;
+			padding: 20px;
+			border-radius: 5px;
+		}
+
+		.q-icon {
+			background-color: rgba(9, 155, 75, 1);
+			border-radius: 50%;
+			color: white;
+			display: inline-block;
+			font-size: 1.5em;
+			/* フォントサイズを大きくします */
+			height: 2em;
+			/* 高さを大きくします */
+			line-height: 2em;
+			/* line-heightも同じ値に調整 */
+			margin-right: 0.5em;
+			text-align: center;
+			width: 2em;
+			/* 幅を大きくします */
+		}
+	</style>
 </head>
 
 <body>
 	<div class="container">
-	<h1 class="toph1"><span class="q-icon">Q</span>体調不良でお休みしたいです。</h1>
-	<h2>A.休暇・早退の申請方法のマニュアルです。</h2>
-	<a href="f.txt">休暇・早退マニュアルはこちら</a>
+		<h1 class="toph1"><span class="q-icon">Q</span>体調不良でお休みしたいです。</h1>
+		<h2>A.休暇・早退の申請方法のマニュアルです。</h2>
+		<a href="f.txt">休暇・早退マニュアルはこちら</a>
 	</div>
 </body>
 

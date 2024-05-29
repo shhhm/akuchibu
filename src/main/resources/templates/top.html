@@ -19,11 +19,9 @@
 				<h2 id="top2">新入社員用のヘルプページです。お気軽にどうぞ！！</h2>
 			</div>
 		</header>
-
 		<main>
 			<p id="top3">気になることを選択して送信をクリック！</p>
 			<form id="surveyForm" th:action="@{/a}">
-
 				<div class="radio-group">
 					<label>
 						<input type="radio" name="choice" value="A"> 外部研修について
@@ -50,25 +48,20 @@
 						<input type="radio" name="choice" value="H"> 忌引き休暇を取得したい
 					</label><br>
 					<p></p>
-
 					<label>
-
 						<input type="radio" name="choice" value="I">その他のお悩み、ご意見があればコメント欄に入力してください（匿名なので安心してね）
 					</label>
 				</div>
 				<textarea id="other" name="other" rows="4" placeholder="例）通勤経路を変えたいです"></textarea>
-
 				<p><button type="button" onclick="submitSurvey()">送信</button> </p>
 			</form>
 	</div>
 	</main>
-
 	<script>
 		function submitSurvey() {
 			// 選択されたラジオボタンの値を取得
 			const form = document.getElementById('surveyForm');
 			const choice = form.elements['choice'].value;
-
 			// 遷移先のページを選択された値に基づいて決定
 			let targetUrl;
 			switch (choice) {
@@ -105,19 +98,14 @@
 				case 'I':
 					targetUrl = 'i';
 					break
-
 				default:
 					alert('選択肢を選んでください。');
 					return;
 			}
-
-
 			// 選択されたページに遷移
 			window.location.href = targetUrl;
 		}
 	</script>
-
-
 </body>
 
 </html>

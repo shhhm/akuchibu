@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
@@ -10,22 +10,21 @@
 
 <body>
 	<h1>入力確認</h1>
-	<div th:object="${form}">
-		<p>以下の内容で送信します</p>
-		<p th:text="*{come}">あああ</p>
+	<div th:object="${input}">
+		<p>ここから</p>
+		<p th:text="*{come}"></p>
+		<p>ここまで</p>
+	</div>
 
 
 
-		<form method="get" action="#" th:action="@{/complete}">
-			<input type="hidden" name="name1" th:value="*{name1}">
+	<form method="get" action="#" th:action="@{/complete}">
+		<input type="submit" value="完了画面へ">
+	</form>
 
-			<input type="submit" value="完了画面へ">
-		</form>
-
-		<form method="get" action="#" th:action="@{/top}">
-			<input type="hidden" name="name1" th:value="*{name1}">
-			<input type="submit" value="入力画面へ">
-		</form>
+	<form method="get" action="#" th:action="@{/top}">
+		<input type="submit" value="入力画面へ">
+	</form>
 
 	</div>
 </body>

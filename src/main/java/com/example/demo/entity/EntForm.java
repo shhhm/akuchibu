@@ -9,7 +9,6 @@ import com.example.demo.dao.SampleDao;
 
 @Controller
 public class EntForm {
-
 	private final SampleDao sampleDao;
 
 	@Autowired
@@ -39,8 +38,6 @@ public class EntForm {
 		} else if ("忌引き".equals(choice)) {
 			sampleDao.incrementCountForOptionH();
 		}
-
 		return "redirect:/thankyou"; // 送信後のページにリダイレクト
 	}
-
 }

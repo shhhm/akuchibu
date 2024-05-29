@@ -1,91 +1,98 @@
 <!DOCTYPE html>
-<html lang="ja">
+
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>部署説明</title>
 	<style>
-				body {
-				    font-family: Arial, sans-serif;
-				    background-color: #f8f8f8;
-				    margin: 0;
-				    padding: 0;
-				}
-				
-				.container {
-				    width: 80%;
-				    max-width: 1500px;
-				    margin: 50px auto;
-				    padding: 20px;
-				    background-color: #fff;
-				    border-radius: 8px;
-				    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-				}
-				.toph1{
-				    font-size: 1.5em;
-				    color: #fff;
-				    background-color: #4CAF50;
-				    padding: 20px;
-				    border-radius: 5px;
-				}
-				.q-icon {
-				    background-color: rgba(9, 155, 75, 1);
-				    border-radius: 50%;
-				    color: white;
-				    display: inline-block;
-				    font-size: 1.5em; /* フォントサイズを大きくします */
-				    height: 2em;     /* 高さを大きくします */
-				    line-height: 2em; /* line-heightも同じ値に調整 */
-				    margin-right: 0.5em;
-				    text-align: center;
-				    width: 2em;     /* 幅を大きくします */
-				}
-			</style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #F8F8F8;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			width: 80%;
+			max-width: 1500px;
+			margin: 50px auto;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 8px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		.toph1 {
+			font-size: 1.5em;
+			color: #fff;
+			background-color: #4CAF50;
+			padding: 20px;
+			border-radius: 5px;
+		}
+
+		.q-icon {
+			background-color: rgba(9, 155, 75, 1);
+			border-radius: 50%;
+			color: white;
+			display: inline-block;
+			font-size: 1.5em;
+			/* フォントサイズを大きくします */
+			height: 2em;
+			/* 高さを大きくします */
+			line-height: 2em;
+			/* line-heightも同じ値に調整 */
+			margin-right: 0.5em;
+			text-align: center;
+			width: 2em;
+			/* 幅を大きくします */
+		}
+	</style>
 </head>
 
 <body>
 	<div class="container">
-	<h1 class="toph1"><span class="q-icon">Q</span>部署について知りたいです。</h1>
-	
-	<h2>A.部署説明の資料です。</h2>
-	<a href="C.txt">〇〇部の資料はこちら</a><br>
-	<a href="C.txt">〇〇部の資料はこちら</a><br>
-	<a href="C.txt">〇〇部の資料はこちら</a><br>
-	<p>さらに知りたい場合は、以下のメンターにお気軽にご相談ください。</p>
-	<table border="1">
-		<tr>
-			<th>部署</th>
-			<th>名前</th>
-			<th>アドレス</th>
-		</tr>
-		<tr>
-			<td>〇〇部</td>
-			<td>○山○男</td>
-			<td>abc@example.com</td>
-		</tr>
-		<tr>
-			<td>○○部</td>
-			<td>○田○子</td>
-			<td>def@example.com</td>
-		</tr>
-		<tr>
-			<td>○○部</td>
-			<td>○山○子</td>
-			<td>ghi@example.com</td>
-		</tr>
-		<tr>
-			<td>○○部</td>
-			<td>○山○郎</td>
-			<td>jkl@example.com</td>
-		</tr>
-		<tr>
-			<td>○○部</td>
-			<td>○川○夫</td>
-			<td>mno@example.com</td>
-		</tr>
-	</table>
-	   </div>
+		<h1 class="toph1"><span class="q-icon">Q</span>部署について知りたいです。</h1>
+
+		<h2>A.部署説明の資料です。</h2>
+		<a href="C.txt">〇〇部の資料はこちら</a><br>
+		<a href="C.txt">〇〇部の資料はこちら</a><br>
+		<a href="C.txt">〇〇部の資料はこちら</a><br>
+		<p>さらに知りたい場合は、以下のメンターにお気軽にご相談ください。</p>
+		<table border="1">
+			<tr>
+				<th>部署</th>
+				<th>名前</th>
+				<th>アドレス</th>
+			</tr>
+			<tr>
+				<td>〇〇部</td>
+				<td>○山○男</td>
+				<td>abc@example.com</td>
+			</tr>
+			<tr>
+				<td>○○部</td>
+				<td>○田○子</td>
+				<td>def@example.com</td>
+			</tr>
+			<tr>
+				<td>○○部</td>
+				<td>○山○子</td>
+				<td>ghi@example.com</td>
+			</tr>
+			<tr>
+				<td>○○部</td>
+				<td>○山○郎</td>
+				<td>jkl@example.com</td>
+			</tr>
+			<tr>
+				<td>○○部</td>
+				<td>○川○夫</td>
+				<td>mno@example.com</td>
+			</tr>
+		</table>
+	</div>
 </body>
 
 </html>
