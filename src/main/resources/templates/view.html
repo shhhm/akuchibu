@@ -1,63 +1,71 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <title>Survey Results</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" th:href="style.css" />
-    <style>
-		h1{
-					    font-size: 1.5em;
-					    color: #fff;
-					    background-color: #4CAF50;
-					    padding: 20px;
-					}
-					body {
-								    font-family: Arial, sans-serif;
-								    background-color: #f8f8f8;
-								    margin: 0;
-								    padding: 0;
-								}
-								
-								.container {
-								    width: 80%;
-								    max-width: 1500px;
-								    margin: 50px auto;
-								    padding: 20px;
-								    background-color: #fff;
-								    border-radius: 8px;
-								    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-								}
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+	<title>Survey Results</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" th:href="style.css" />
+	<style>
+		h1 {
+			font-size: 1.5em;
+			color: #fff;
+			background-color: #4CAF50;
+			padding: 20px;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f8f8f8;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			width: 80%;
+			max-width: 1500px;
+			margin: 50px auto;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 8px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		th,
+		td {
+			padding: 8px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+
+		th {
+			background-color: #f2f2f2;
+		}
+	</style>
 </head>
+
 <body>
 	<div class="container">
-    <h1>送信回数</h1>
-    <table>
-        <tr>
-            <th>項目</th>
-            <th>回数</th>
-        </tr>
-        <tr th:each="entry : ${surveyResults}">
-			<td th:text="'・ ' + ${entry.key}"></td>
-            <td th:text="${entry.value}"></td>
-        </tr>
-    </table>
-    <p>
-        
-		<input type="submit" style="width: 100px; height: 30px;" th:href="@{/top}" value="トップへ">
-    </p>
+		<h1>送信回数</h1>
+		<table>
+			<tr>
+				<th>項目</th>
+				<th>回数</th>
+			</tr>
+			<tr th:each="entry : ${surveyResults}">
+				<td th:text="'・ ' + ${entry.key}"></td>
+				<td th:text="${entry.value}"></td>
+			</tr>
+		</table>
+		<p>
+
+			<input type="submit" style="width: 100px; height: 30px;" th:href="@{/top}" value="トップへ">
+		</p>
 	</div>
 </body>
+
 </html>

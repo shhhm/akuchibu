@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{/style.css}">
-    <title>Survey Form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" th:href="@{/style.css}">
+	<title>Survey Form</title>
 </head>
+
 <body id="top">
-    <div class="container">
-        <!-- フォーム -->
-        <header>
-            <img th:src="@{/images/logo.png}" alt="セブン＆アイ Net Media ロゴ" class="logo">
-            <h1 class="toph1">ようこそ株式会社セブン＆アイ・ネットメディアへ！</h1>
-            <div class="header-content">
-                <img th:src="@{/images/kkrn_icon_faq_22.png}" alt="QandAlogo" class="logo2">
-                <h2 id="top2">新入社員用のヘルプページです。お気軽にどうぞ！！</h2>
-            </div>
-        </header>
-        <main>
-            <p id="top3">気になることを選択して送信をクリック！</p>
-            <form id="surveyForm" th:action="@{/a}" method="post">
-                <div class="radio-group">
-                    <label>
-                        <input type="radio" name="choice" value="A"> 外部研修について
-                    </label><br>
-                    <label>
-                        <input type="radio" name="choice" value="B"> 6月以降の内部研修の詳細について
-                    </label><br>
-                    <label>
-                        <input type="radio" name="choice" value="C"> 部署について
-                    </label><br>
-                    <label>
-                        <input type="radio" name="choice" value="D"> パソコンがロックされてしまった（パスワードを忘れた）
-                    </label><br>
-                    <label>
-                        <input type="radio" name="choice" value="E"> 打刻方法について
-                    </label><br>
-                    <label>
-                        <input type="radio" name="choice" value="F"> 体調不良で休みたい
-                    </label><br>
-                    <label>
-                        <input type="radio" name="choice" value="G"> 有給休暇を取得したい
-                    </label><br>
-                    <label>
-                        <input type="radio" name="choice" value="H"> 忌引き休暇を取得したい
-                    </label><br>
-                    <p></p>
-                    <label>
-                        <input type="radio" name="choice" value="I">その他のお悩み、ご意見があればコメント欄に入力してください（匿名なので安心してね）
-                    </label>
-                </div>
-                <textarea id="other" name="other" rows="4" placeholder="例）研修会場に先輩社員がいなくて不安です"></textarea>
-                <p><button type="submit">送信</button></p>
-            </form>
-            <div th:if="${error}" class="error-message" th:text="${error}"></div>
-        </main>
-    </div>
+	<div class="container">
+		<!-- フォーム -->
+		<header>
+			<img th:src="@{/images/logo.png}" alt="セブン＆アイ Net Media ロゴ" class="logo">
+			<h1 class="toph1">ようこそ 株式会社セブン＆アイ・ネットメディアへ！</h1>
+			<div class="header-content">
+				<img th:src="@{/images/kkrn_icon_faq_22.png}" alt="QandAlogo" class="logo2">
+				<h2 id="top2">新入社員用のヘルプページです。お気軽にどうぞ！！</h2>
+			</div>
+		</header>
+		<main>
+			<p id="top3">気になることを選択して送信をクリック！</p>
+			<form id="surveyForm" th:action="@{/a}" method="post">
+				<div class="radio-group">
+					<label>
+						<input type="radio" name="choice" value="A"> 外部研修について
+					</label><br>
+					<label>
+						<input type="radio" name="choice" value="B"> 6月以降の内部研修について
+					</label><br>
+					<label>
+						<input type="radio" name="choice" value="C"> 部署について
+					</label><br>
+					<label>
+						<input type="radio" name="choice" value="D"> パソコンがロックされてしまった・パスワードを忘れた
+					</label><br>
+					<label>
+						<input type="radio" name="choice" value="E"> 打刻方法について
+					</label><br>
+					<label>
+						<input type="radio" name="choice" value="F"> 体調不良で休みたい・早退したい
+					</label><br>
+					<label>
+						<input type="radio" name="choice" value="G"> 有給休暇を取得したい
+					</label><br>
+					<label>
+						<input type="radio" name="choice" value="H"> 忌引き休暇を取得したい
+					</label><br>
+					<p></p>
+					<label>
+						<input type="radio" name="choice" value="I">その他のお悩み、ご意見があればコメント欄に入力してください（匿名なので安心してね）
+					</label>
+				</div>
+				<textarea id="other" name="other" rows="4" placeholder="例）研修会場に先輩社員がいなくて不安です"></textarea>
+				<p><button type="submit">送信</button></p>
+			</form>
+			<div th:if="${error}" class="error-message" th:text="${error}"></div>
+		</main>
+	</div>
 </body>
+
 </html>

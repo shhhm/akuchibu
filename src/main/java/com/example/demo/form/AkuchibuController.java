@@ -23,16 +23,6 @@ public class AkuchibuController {
 		this.sampleDao = sampleDao;
 	}
 
-	@RequestMapping("/")
-	public String chat1() {
-		return "chat1";
-	}
-
-	@RequestMapping("/chat2")
-	public String top() {
-		return "chat2";
-	}
-
 	@RequestMapping("/top")
 	public String chat() {
 		return "top";
