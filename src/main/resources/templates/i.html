@@ -8,7 +8,16 @@
     <title>Other Issues</title>
 </head>
 <body>
-    <h1>その他のお悩み・ご意見</h1>
+    <h1>確認画面</h1>
     <p th:text="${message}">ここにメッセージが表示されます</p>
+	
+	<form method="get" action="#" th:action="@{/complete}">
+				<input type="hidden" name="name1" th:value="*{name1}">
+				<input type="submit" style="width: 100px; height: 30px;"value="完了画面へ">
+			</form>
+			<form method="get" action="#" th:action="@{/top}">
+				<input type="hidden" name="name1" th:value="*{name1}">
+				<input type="submit" style="width: 100px; height: 30px;" value="入力画面へ">
+			</form>
 </body>
 </html>
